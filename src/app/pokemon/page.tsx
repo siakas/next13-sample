@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 type PokemonList = {
   count: number
   next: string
@@ -34,7 +36,7 @@ const PokemonIndexPage = async () => {
           <h4>
             {pokemon.id} - {pokemon.name}
           </h4>
-          <a href={pokemon.url}>{pokemon.name}</a>
+          <Link href={pokemon.url}>{pokemon.name}</Link>
           <img src={pokemon.imgSrc} alt={pokemon.name} />
         </div>
       ))}
